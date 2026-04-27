@@ -1,0 +1,899 @@
+---
+const launches = [
+  {
+    titulo: "SpaceX ViaSat-3 F3 - Abril 2026",
+    logo: "https://imgs.search.brave.com/78pGmq84Qcajrc66Z4RawO1zKhhI41-XA22_Y6NQZdA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI2LzIvc3BhY2V4/LWxvZ28tcG5nX3Nl/ZWtsb2dvLTI2MTgx/Ni5wbmc",
+    resumen:
+      "El lanzamiento de hoy lo ocupa un satelite de comunicaciones llamado ViaSat-3 F3, el tercero y ultimo de una constelacion global de internet satelital. Este en concreto dara cobertura principalmente a la region Asia-Pacifico y es clave para completar la red global de Viasat.",
+    video: "https://www.youtube.com/live/FJREzdsBb8k?si=7--LPhHlFo4gVHUc"
+  },
+  {
+    titulo: "Ula Launch Amazon LEO - Abril 2026",
+    logo: "https://logos-world.net/wp-content/uploads/2023/03/United-Launch-Alliance-ULA-Logo-500x281.png",
+    resumen:
+      "United Launch Alliance pondrá en órbita 29 satélites de Amazon Leo / Project Kuiper a bordo de un Atlas V 551, uno de los últimos vuelos de este histórico cohete. La misión forma parte del ambicioso despliegue de la constelación de internet satelital de Amazon, diseñada para competir con Starlink y ofrecer conectividad global desde órbita baja.",
+    video: ""
+  },
+  {
+	titulo:"ESA-CAS Vega C Misión SMILE - Mayo 2026",
+	logo:"https://imgs.search.brave.com/8eOONHEhDvn4-QpbTVOF5kdztNplkWmMPYcs863cntI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9icmFu/ZC5lc2EuaW50L2Zp/bGVzLzIwMjMvMTIv/RVNBX2xvZ29fVGFn/bGluZV9EU19FTi0x/LTEwMjR4NzQ5LnBu/Zw",
+	resumen:"Avio lanzará la misión European Space Agency SMILE, un proyecto científico internacional diseñado para estudiar cómo el viento solar interactúa con el campo magnético de la Tierra.",
+	video:""
+  },
+  
+];
+
+const news = [
+  {
+    titulo: "Nuevo acuerdo de inversion",
+    logo: "https://placehold.co/64x64/png?text=NI",
+    resumen:
+      "Se cerro una ronda privada con inversores estrategicos para fortalecer tecnologia y crecimiento comercial en el segundo semestre.",
+    enlace: "https://tuweb.com/noticias/acuerdo-inversion"
+  },
+  {
+    titulo: "Actualizacion del portfolio",
+    logo: "https://placehold.co/64x64/png?text=AP",
+    resumen:
+      "Se incorporaron dos nuevas participadas y se redistribuyeron recursos para priorizar empresas con mejor proyeccion de rentabilidad.",
+    enlace: "https://tuweb.com/noticias/actualizacion-portfolio"
+  }
+];
+
+const investments = [
+  {
+    logo: "https://placehold.co/64x64/png?text=AC",
+    empresa: "AeroCloud",
+    inversion: "18.000 EUR",
+    acciones: "1.250"
+  },
+  {
+    logo: "https://placehold.co/64x64/png?text=GB",
+    empresa: "GreenByte",
+    inversion: "12.500 EUR",
+    acciones: "860"
+  },
+  {
+    logo: "https://placehold.co/64x64/png?text=NT",
+    empresa: "NovaTech",
+    inversion: "25.000 EUR",
+    acciones: "1.980"
+  }
+];
+
+const featuredFlights = [
+  {
+    titulo: "Primer Falcon 9 con aterrizaje autonomo ",
+    canal: "SpaceX",
+    video: "https://www.youtube.com/watch?v=lEr9cPpuAx8"
+  },
+  {
+    titulo: "Starship - Primer aterrizaje",
+    canal: "SpaceX",
+    video: "https://youtu.be/RYUr-5PYA7s?si=kFRplhYcFHk8A_QB"
+  },
+  {
+    titulo: "Europa - Ariane 6 Vuelo 1",
+    canal: "ESA",
+    video: "https://youtu.be/Jgdb7Dxvpdw?si=KTduMF8qGOuwdlpU"
+  },
+
+  {
+    titulo: "Miura 1 - Primer cohete español",
+    canal: "PLD Space",
+    video: "https://youtu.be/50i8Z9OhhSg?si=tDWGFp70MogItC7-"
+  },
+
+  {
+    titulo: "Blue Origin - New Glenn Vuelo 1",
+    canal: "Blue Origin",
+    video: "https://www.youtube.com/watch?v=9pillaOxGCo"
+  },
+
+  {
+    titulo: "Crew Dragon - Primera mision tripulada",
+    canal: "SpaceX",
+    video: "https://youtu.be/FMi_m9-e9MU?si=HPE47o7rpLUQ6lXW"
+  },
+
+  {
+    titulo: "NASA - Artemis 2 volvemos a la Luna",
+    canal: "NASA",
+    video: "https://youtu.be/IfRqrrBbT-Y?si=FbG_5oLLts6PNCne"
+  },
+
+  {
+    titulo: "Rocket Lab Electron - primero motor 3d printed",
+    canal: "RKLB",
+    video: "https://www.youtube.com/watch?v=VBlIvghQTlI"
+  },
+
+  {
+    titulo: "NASA - Despliegue del James Webb",
+    canal: "NASA",
+    video: "https://www.youtube.com/watch?v=7nT7JGZMbtM"
+  },
+
+  {
+    titulo: "NASA - Aterrizaje en Marte Rover Perseverance",
+    canal: "NASA",
+    video: "https://www.youtube.com/watch?v=4czjS9h4Fpg"
+  }
+];
+
+const profile = {
+  nombre: "Adrian Calleja",
+  descripcion:
+    "FullStack Developer",
+  linkedin: "https://www.linkedin.com/in/adrii-call/",
+  foto: "/perfil-linkedin.png"
+};
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlaneTaria</title>
+    <style>
+      :root {
+        --paper: #f6f1e7;
+        --ink: #2a2826;
+        --line: #c9c1b5;
+        --accent: #6f5138;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+        background: radial-gradient(circle at top, #e8ded0 0%, #d8c8af 45%, #c3ab8e 100%);
+        color: var(--ink);
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .page-layout {
+        width: min(100%, 1200px);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 1.2rem;
+        align-items: start;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 780px;
+        background: var(--paper);
+        border: 2px solid var(--ink);
+        border-radius: 10px;
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+        padding: 1.6rem;
+      }
+
+      .profile-card {
+        background: var(--paper);
+        border: 2px solid var(--ink);
+        border-radius: 12px;
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+        padding: 1.2rem;
+        text-align: center;
+        position: sticky;
+        top: 1rem;
+      }
+
+      .profile-photo {
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--ink);
+        margin-bottom: 0.8rem;
+      }
+
+      .profile-name {
+        font-size: 1.05rem;
+        margin: 0.3rem 0 0.7rem;
+        text-transform: uppercase;
+      }
+
+      .profile-description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 0.9rem;
+      }
+
+      .profile-link {
+        display: inline-block;
+        border: 1px solid var(--ink);
+        padding: 0.5rem 0.7rem;
+        text-decoration: none;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: clamp(1.4rem, 2.2vw, 2rem);
+        border-bottom: 2px dashed var(--line);
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.25rem;
+      }
+
+      p {
+        margin: 0 0 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      .block {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .block h2 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+        color: var(--accent);
+      }
+
+      .launch-list {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      .launch-list li {
+        margin-bottom: 0.4rem;
+      }
+
+      .entry-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        text-align: left;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #fff;
+        color: var(--ink);
+        padding: 0.6rem 0.7rem;
+        font-family: inherit;
+        cursor: pointer;
+        margin-bottom: 0.45rem;
+      }
+
+      .entry-button:hover {
+        background: #f0e7d7;
+      }
+
+      .entry-logo-slot {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #b8ae9f;
+        border-radius: 6px;
+        background: #fff;
+        object-fit: cover;
+        display: block;
+        flex-shrink: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+      }
+
+      .entry-title {
+        min-width: 0;
+      }
+
+      .investment-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .investment-table th,
+      .investment-table td {
+        border: 1px solid var(--line);
+        padding: 0.65rem;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      .investment-table th {
+        background: #eee5d7;
+        font-weight: 700;
+      }
+
+      .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 6px;
+        object-fit: cover;
+        border: 1px solid var(--line);
+      }
+
+      .video-carousel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.45);
+        padding: 0.85rem;
+      }
+
+      .video-carousel-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-bottom: 0.55rem;
+      }
+
+      .video-carousel-title {
+        margin: 0;
+        font-size: 0.92rem;
+        color: var(--accent);
+        text-transform: uppercase;
+      }
+
+      .video-carousel-controls {
+        display: flex;
+        gap: 0.4rem;
+      }
+
+      .carousel-btn {
+        border: 1px solid var(--ink);
+        background: #fff;
+        color: var(--ink);
+        font-family: inherit;
+        font-size: 0.76rem;
+        padding: 0.35rem 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .carousel-btn:hover {
+        background: #f0e7d7;
+      }
+
+      .video-carousel-track {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .video-carousel-slides {
+        display: flex;
+        transition: transform 320ms ease;
+        will-change: transform;
+      }
+
+      .video-slide {
+        width: 100%;
+        flex: 0 0 100%;
+      }
+
+      .video-slide iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #000;
+        display: block;
+      }
+
+      .video-slide-meta {
+        margin-top: 0.5rem;
+      }
+
+      .video-slide-meta strong {
+        display: block;
+        font-size: 0.9rem;
+      }
+
+      .video-slide-meta span {
+        font-size: 0.8rem;
+        color: #5c554d;
+      }
+
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        z-index: 10;
+        perspective: 1800px;
+      }
+
+      .overlay.is-open {
+        display: flex;
+      }
+
+      .a4-sheet {
+        width: min(95vw, 720px);
+        aspect-ratio: 1 / 1.414;
+        max-height: 92vh;
+        overflow: auto;
+        background: #fcfaf5;
+        border: 1px solid #1f1d1a;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+        padding: 2rem 1.6rem;
+        position: relative;
+        transform-origin: left center;
+      }
+
+      .a4-sheet::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 20%);
+      }
+
+      .overlay.book-open .a4-sheet {
+        animation: openBookPage 860ms cubic-bezier(0.22, 0.7, 0.2, 1);
+      }
+
+      .overlay.book-open .a4-sheet::before {
+        animation: pageShade 860ms ease-out;
+      }
+
+      .overlay.book-close .a4-sheet {
+        animation: closeBookPage 520ms cubic-bezier(0.22, 0.7, 0.2, 1) forwards;
+      }
+
+      .overlay.book-close .a4-sheet::before {
+        animation: pageShadeClose 520ms ease-in forwards;
+      }
+
+      @keyframes openBookPage {
+        0% {
+          opacity: 0;
+          transform: rotateY(-68deg) translateX(22px) scale(0.99);
+        }
+        60% {
+          opacity: 1;
+          transform: rotateY(4deg) translateX(0) scale(1);
+        }
+        100% {
+          opacity: 1;
+          transform: rotateY(0deg) translateX(0) scale(1);
+        }
+      }
+
+      @keyframes pageShade {
+        0% {
+          opacity: 0.85;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes closeBookPage {
+        0% {
+          opacity: 1;
+          transform: rotateY(0deg) translateX(0) scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: rotateY(-60deg) translateX(18px) scale(0.99);
+        }
+      }
+
+      @keyframes pageShadeClose {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.82;
+        }
+      }
+
+      .a4-sheet h3 {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 1rem;
+      }
+
+      .a4-title-row {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin: 0 0 0.8rem;
+        border-bottom: 1px dashed var(--line);
+        padding-bottom: 0.5rem;
+      }
+
+      .a4-title-logo-slot {
+        width: 35px;
+        height: 35px;
+        border: 1px solid #b8ae9f;
+        border-radius: 6px;
+        background: #fff;
+        object-fit: cover;
+        flex-shrink: 0;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .a4-title-logo-slot.has-logo {
+        border-style: solid;
+      }
+
+      .a4-sheet p {
+        line-height: 1.45;
+      }
+
+      #a4Summary {
+        margin-bottom: 0.7rem;
+      }
+
+      .a4-actions {
+        display: flex;
+        gap: 0.7rem;
+        margin-top: 1.1rem;
+      }
+
+      .a4-video-wrap {
+        margin: 0.45rem 0 1rem;
+        border: 1px solid var(--line);
+        background: #f3ecdf;
+        padding: 0.4rem;
+      }
+
+      .a4-video-wrap[hidden] {
+        display: none;
+      }
+
+      .a4-video {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: 0;
+        display: block;
+      }
+
+      .a4-link,
+      .a4-close {
+        border: 1px solid var(--ink);
+        padding: 0.4rem 0.6rem;
+        font-size: 0.82rem;
+        text-decoration: none;
+        color: var(--ink);
+        background: #fff;
+        font-family: inherit;
+        cursor: pointer;
+      }
+
+      @media (max-width: 720px) {
+        .page-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .container {
+          padding: 1.2rem;
+          max-width: 100%;
+        }
+
+        .investment-table {
+          font-size: 0.86rem;
+        }
+
+        .profile-card {
+          position: static;
+          order: -1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-layout">
+      <main class="container">
+        <h1>PlaneTaria</h1>
+        <p>
+          Blog dedicado a la difusion del sector espacial y tecnologico de las empresas mas punteras e innovadoras.
+        </p>
+
+        <section class="block">
+          <h2>Lanzamientos recientes</h2>
+          <ul class="launch-list">
+            {launches.map((launch) => (
+              <li>
+                <button
+                  type="button"
+                  class="entry-button"
+                  data-kind="lanzamiento"
+                  data-title={launch.titulo}
+                  data-logo={launch.logo}
+                  data-summary={launch.resumen}
+                  data-video={launch.video}
+                >
+                  <img
+                    class="entry-logo-slot"
+                    src={launch.logo}
+                    alt={`Logo de ${launch.titulo}`}
+                    loading="lazy"
+                  />
+                  <span class="entry-title">{launch.titulo}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2>Noticias</h2>
+          <ul class="launch-list">
+            {news.map((item) => (
+              <li>
+                <button
+                  type="button"
+                  class="entry-button"
+                  data-kind="noticia"
+                  data-title={item.titulo}
+                  data-logo={item.logo}
+                  data-summary={item.resumen}
+                  data-link={item.enlace}
+                >
+                  <img
+                    class="entry-logo-slot"
+                    src={item.logo}
+                    alt={`Logo de ${item.titulo}`}
+                    loading="lazy"
+                  />
+                  <span class="entry-title">{item.titulo}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2>Inversiones</h2>
+          <table class="investment-table">
+            <thead>
+              <tr>
+                <th>Logo</th>
+                <th>Empresa</th>
+                <th>Cantidad de inversion</th>
+                <th>Acciones totales</th>
+              </tr>
+            </thead>
+            <tbody>
+              {investments.map((item) => (
+                <tr>
+                  <td><img src={item.logo} alt={`Logo de ${item.empresa}`} class="logo" /></td>
+                  <td>{item.empresa}</td>
+                  <td>{item.inversion}</td>
+                  <td>{item.acciones}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        <section class="block">
+          <h2>Videos destacados</h2>
+          <div class="video-carousel" id="flightCarousel">
+            <div class="video-carousel-head">
+              <p class="video-carousel-title">Vuelos mas importantes</p>
+              <div class="video-carousel-controls">
+                <button type="button" class="carousel-btn" id="carouselPrev">Anterior</button>
+                <button type="button" class="carousel-btn" id="carouselNext">Siguiente</button>
+              </div>
+            </div>
+            <div class="video-carousel-track">
+              <div class="video-carousel-slides" id="carouselSlides">
+                {featuredFlights.map((item, index) => (
+                  <article class="video-slide" data-slide-index={index}>
+                    <iframe
+                      src=""
+                      data-video-url={item.video}
+                      title={`Video destacado: ${item.titulo}`}
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                    <div class="video-slide-meta">
+                      <strong>{item.titulo}</strong>
+                      <span>{item.canal}</span>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="profile-card">
+        <img class="profile-photo" src={profile.foto} alt={`Foto de perfil de ${profile.nombre}`} />
+        <h2 class="profile-name">{profile.nombre}</h2>
+        <p class="profile-description">{profile.descripcion}</p>
+        <a class="profile-link" href={profile.linkedin} target="_blank" rel="noreferrer">
+          Ver LinkedIn
+        </a>
+      </aside>
+    </div>
+
+    <div id="detailOverlay" class="overlay" aria-hidden="true">
+      <article id="a4Sheet" class="a4-sheet" role="dialog" aria-modal="true" aria-labelledby="a4Title">
+        <div class="a4-title-row">
+          <img id="a4TitleLogo" class="a4-title-logo-slot" src="" alt="" />
+          <h3 id="a4Title"></h3>
+        </div>
+        <p id="a4Summary"></p>
+        <div id="a4VideoWrap" class="a4-video-wrap" hidden>
+          <iframe
+            id="a4Video"
+            class="a4-video"
+            src=""
+            title="Video de retransmision"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="a4-actions">
+          <button id="a4Close" type="button" class="a4-close">Cerrar</button>
+        </div>
+      </article>
+    </div>
+
+    <script>
+      // @ts-nocheck
+      const overlay = document.getElementById("detailOverlay");
+      const titleEl = document.getElementById("a4Title");
+      const titleLogoEl = document.getElementById("a4TitleLogo");
+      const summaryEl = document.getElementById("a4Summary");
+      const closeEl = document.getElementById("a4Close");
+      const videoWrapEl = document.getElementById("a4VideoWrap");
+      const videoEl = document.getElementById("a4Video");
+      const sheetEl = document.getElementById("a4Sheet");
+      const entryButtons = document.querySelectorAll("button.entry-button");
+      const carouselSlidesEl = document.getElementById("carouselSlides");
+      const carouselPrevEl = document.getElementById("carouselPrev");
+      const carouselNextEl = document.getElementById("carouselNext");
+      let isClosing = false;
+
+      if (overlay && titleEl && titleLogoEl && summaryEl && closeEl && videoWrapEl && videoEl && sheetEl) {
+        function toYouTubeEmbed(url) {
+          if (!url) return "";
+          if (url.includes("/embed/")) return `${url}${url.includes("?") ? "&" : "?"}mute=1`;
+
+          const liveMatch = url.match(/youtube\.com\/live\/([^?&/]+)/i);
+          if (liveMatch) return `https://www.youtube.com/embed/${liveMatch[1]}?mute=1`;
+
+          const watchMatch = url.match(/[?&]v=([^?&/]+)/i);
+          if (watchMatch) return `https://www.youtube.com/embed/${watchMatch[1]}?mute=1`;
+
+          const shortMatch = url.match(/youtu\.be\/([^?&/]+)/i);
+          if (shortMatch) return `https://www.youtube.com/embed/${shortMatch[1]}?mute=1`;
+
+          return "";
+        }
+
+        function openA4(kind, title, logo, summary, _link, video) {
+          isClosing = false;
+          titleEl.textContent = `${kind}: ${title}`;
+          summaryEl.textContent = summary;
+          titleLogoEl.src = logo || "";
+          titleLogoEl.classList.toggle("has-logo", Boolean(logo));
+
+          const embedUrl = toYouTubeEmbed(video);
+          if (embedUrl) {
+            videoEl.src = embedUrl;
+            videoWrapEl.hidden = false;
+          } else {
+            videoEl.src = "";
+            videoWrapEl.hidden = true;
+          }
+
+          overlay.classList.remove("book-open");
+          overlay.classList.remove("book-close");
+          void sheetEl.offsetWidth;
+          overlay.classList.add("book-open");
+          overlay.classList.add("is-open");
+          overlay.setAttribute("aria-hidden", "false");
+        }
+
+        function closeA4() {
+          if (isClosing || !overlay.classList.contains("is-open")) return;
+          isClosing = true;
+          overlay.classList.remove("book-open");
+          overlay.classList.add("book-close");
+        }
+
+        sheetEl.addEventListener("animationend", (event) => {
+          if (event.animationName !== "closeBookPage") return;
+          overlay.classList.remove("is-open");
+          overlay.classList.remove("book-open");
+          overlay.classList.remove("book-close");
+          overlay.setAttribute("aria-hidden", "true");
+          videoEl.src = "";
+          videoWrapEl.hidden = true;
+          isClosing = false;
+        });
+
+        entryButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            openA4(
+              button.dataset.kind || "",
+              button.dataset.title || "",
+              button.dataset.logo || "",
+              button.dataset.summary || "",
+              button.dataset.link || "#",
+              button.dataset.video || ""
+            );
+          });
+        });
+
+        closeEl.addEventListener("click", closeA4);
+
+        overlay.addEventListener("click", (event) => {
+          if (event.target === overlay) {
+            closeA4();
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && overlay.classList.contains("is-open")) {
+            closeA4();
+          }
+        });
+      }
+
+      if (carouselSlidesEl && carouselPrevEl && carouselNextEl) {
+        const carouselIframes = Array.from(carouselSlidesEl.querySelectorAll("iframe"));
+        const totalSlides = carouselIframes.length;
+        let activeIndex = 0;
+
+        function toYouTubeEmbed(url, autoplay = false) {
+          if (!url) return "";
+          if (url.includes("/embed/")) {
+            const separator = url.includes("?") ? "&" : "?";
+            return `${url}${separator}mute=1${autoplay ? "&autoplay=1" : ""}`;
+          }
+
+          const liveMatch = url.match(/youtube\.com\/live\/([^?&/]+)/i);
+          if (liveMatch) return `https://www.youtube.com/embed/${liveMatch[1]}?mute=1${autoplay ? "&autoplay=1" : ""}`;
+
+          const watchMatch = url.match(/[?&]v=([^?&/]+)/i);
+          if (watchMatch) return `https://www.youtube.com/embed/${watchMatch[1]}?mute=1${autoplay ? "&autoplay=1" : ""}`;
+
+          const shortMatch = url.match(/youtu\.be\/([^?&/]+)/i);
+          if (shortMatch) return `https://www.youtube.com/embed/${shortMatch[1]}?mute=1${autoplay ? "&autoplay=1" : ""}`;
+
+          return "";
+        }
+
+        function renderCarousel() {
+          carouselSlidesEl.style.transform = `translateX(-${activeIndex * 100}%)`;
+          carouselIframes.forEach((iframe, index) => {
+            const sourceUrl = iframe.dataset.videoUrl || "";
+            iframe.src = index === activeIndex ? toYouTubeEmbed(sourceUrl, true) : "";
+          });
+        }
+
+        carouselPrevEl.addEventListener("click", () => {
+          activeIndex = activeIndex === 0 ? totalSlides - 1 : activeIndex - 1;
+          renderCarousel();
+        });
+
+        carouselNextEl.addEventListener("click", () => {
+          activeIndex = activeIndex === totalSlides - 1 ? 0 : activeIndex + 1;
+          renderCarousel();
+        });
+
+        renderCarousel();
+      }
+    </script>
+  </body>
+</html>
